@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+body{
+    background: #292929;
+}
+html{
+    background: #292929;
+}
+#play{
+    .transition{
+        transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease; 
+        -o-transition: all 1s ease; 
+    }
+    .box-shadow{
+        box-shadow:0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .toLeft{
+        .transition;
+        margin-right: 540px !important;
+    }
+    .toRight{
+        .transition;
+        margin-right: 40px !important;
+    }
+    .toHide{
+        .transition;
+        right: -500px !important;
+    }
+    .toShow{
+        .transition;
+        right: 0px !important;
+    }
+    
+   
+    // 头部
+    .header{
+        background: #1d1d1d;
+        height: 80px;
+        line-height: 80px;
+        padding: 0 50px;
+        color: #999;
+        .title{
+            font-size: 24px;
+            font-weight: normal;
+            
+        }
+        a{
+            font-size: 14px;
+            color: #999;
+        }
+        li{
+            margin-left: 30px;
+        }
+        
+    }
+
+
+    // 内容区
+    .content{
+        background: #292929;
+        position: relative;
+        padding: 20px 0 20px 20px;
+
+    }
+    //侧边信息区
+    .info-box{
+        width: 520px;
+        height: 100%;
+        background: transparent;    
+        position: relative;
+        overflow: hidden;
+        li{
+            line-height: 40px;
+        }
+        .icon{
+            margin-right: 20px;
+            font-size: 16px;
+            vertical-align: middle;
+            line-height: 40px;
+        }
+        .title{
+            font-size: 16px;
+            font-weight: normal;
+            color: #666;
+        }
+        .title-box{
+            cursor: pointer;
+        }
+        .selected{
+            .title{
+                 color: #57b430;
+            }
+            .title-box{
+                 color: #57b430;
+            }
+        }
+        .nav{
+            font-size: 14px;
+            color: #57b430;
+            border-bottom: 1px solid #999;
+            height: 64px;
+            line-height: 64px;
+            padding: 0 30px;
+        }
+        .con{
+            padding: 30px;
+
+        }
+        .inner-box{
+            height: 100%;
+            background-color: #1f1f1f;
+            
+        }
+        .info-con{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 500px;
+            padding-right: 20px;
+            
+            
+        }
+        .handle{
+            height: 116px;
+            width: 20px;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            margin-top: -58px;
+            border-radius: 25px 0px 0px 25px;
+            background-color:#313131;
+            text-align: center;
+            .icon{
+                line-height: 116px;
+                color: #666;
+                display: inline-block;
+                width: 20px;
+                text-align: center;
+                cursor: pointer;
+                &.toleft{
+                    .transition;
+                    transform:rotate(0deg);
+                    -ms-transform:rotate(0deg); 	/* IE 9 */
+                    -moz-transform:rotate(0deg); 	/* Firefox */
+                    -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+                    -o-transform:rotate(0deg); 
+                }
+                &.toright{
+                    transform:rotate(180deg);
+                    -ms-transform:rotate(180deg); 	/* IE 9 */
+                    -moz-transform:rotate(180deg); 	/* Firefox */
+                    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+                    -o-transform:rotate(180deg); 
+                    .transition;
+                }
+
+            }
+        }
+    }
+
+    // 播放区
+    .player-box{
+        margin-right: 540px;
+        height: 100%;
+        position: relative;
+       
+    }
+    
+    
+}
+

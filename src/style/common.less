@@ -1,0 +1,105 @@
+
+/*常用类*/
+.left {float:left;}
+.right {float:right}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  height: 0;
+  width: 0;
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:after {
+  clear: both;
+}
+.text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-l{
+  text-align: left;
+}
+.text-r{
+  text-align: right;
+}
+.text-c{
+  text-align: center;
+}
+/*公共样式*/
+html{
+    font-size:14px ;
+    font-family: "微软雅黑" ,sans-serif;
+    line-height: 22px;
+}
+a{color:#57b430}
+
+.middle{
+    width: 1200px;
+    margin: 0 auto;
+}
+.center{
+    margin: 0 auto;
+}
+
+@main-color:#57b430;
+
+.btn-o-90-40{
+  height: 40px;
+  background: #FF5F29;
+  color: #fff;
+  width: 90px;
+  border-radius: 2px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+}
+.btn-o-90-40:hover{
+  color: #fff;
+}
+.box-shadow{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+}
+
+// 模块标题公共类
+
+.module-title {
+      color: #666;
+      margin-bottom: 5px;
+      font-size: 22px;
+      line-height: 22px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      font-weight: normal;
+      height: 33px;
+  
+      .line{
+          height: 100%;
+          display: inline-block;
+          width: 2px;
+          height: 20px;
+          background: #57B32F;
+          vertical-align: middle;
+          margin-right: 5px;
+      }
+      a{
+        color: #666;
+        font-size: 14px;
+      }
+      .icon-more{
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+  }
+
+  // 分页
+  .pagination-box{
+    margin: 20px 0;
+    text-align: center;
+  }
