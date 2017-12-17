@@ -23,6 +23,7 @@
        <!-- 底部进度条 start -->
          <transition name="fade">
                 <div class="bottomCtrl" v-show="isBottomCtrlShow" id="bottomCtrl">
+                    <!--  -->
                     <!-- <div class="bottomCtrl" v-show="false"> -->
                 <!-- <div class="bottomCtrl"  > -->
                     
@@ -80,11 +81,11 @@
         data() {
             return {
                 playerOptions: {
-                muted: true,
+                
                 language: 'zh-CN',
                 playbackRates: [0.7, 1.0, 1.5, 2.0],
                 // fluid: true,
-                
+                muted:false,//开始声音
                 controls:false,
                 height:"100%",
                 width:"100%", 
@@ -125,7 +126,7 @@
                 this.isBottomCtrlShow=true;
                 setTimeout(function(){
                      _this.isBottomCtrlShow=false;
-                },5000);
+                },10000);
 
             },
             videoMouseOver(){
@@ -134,9 +135,9 @@
             //播放
             onPlayerPlay(player) {
                  this.playerCtrl.isPlay=true;
-                 player.volume(this.playerCtrl.volume);
+                 player.volume(this.playerCtrl.volume); 
                  this.$emit('custom-vedio-say',true);
-                this.isBottomShowCtrl();
+                 this.isBottomShowCtrl();
             },
             // 暂停
             onPlayerPause(player) {
@@ -163,10 +164,12 @@
             onPlayerTimeupdate(player){
                 this.playerCtrl.currentTime=timeUtil.secondToDate(player.currentTime());
                 this.playerCtrl.currentTimeInt=Math.floor(player.currentTime());
+                console.log("当前音量",player.volume());
             },
             //状态改变
             playerStateChanged(playerCurrentState) {
                 console.log("状态改变");
+                console.log("当前音量",player.volume());
             },
             playerReadied(player) {
                 console.log('the player is readied', player);
@@ -219,12 +222,10 @@
                 this.player.currentTime(val);
                 this.playerCtrl.currentTimeInt=val;
                 this.playerCtrl.currentTime=timeUtil.secondToDate(val);
-                // console.log("进度条被拉动",val);
             },
             // 音量被拉动
             volumeChange(val){
                 this.player.volume(val/100);
-                console.log("当前音量",this.player.volume());
             }
         },
         
